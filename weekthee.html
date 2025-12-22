@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ลงทะเบียน</title>
+</head>
+<body>
+
+<form>
+    <fieldset>
+        <legend>ลงทะเบียนผู้ใช้</legend>
+
+        <label for="username">ชื่อผู้ใช้</label><br>
+        <input type="text" id="username" name="username" placeholder="ชื่อผู้ใช้" required>
+        <br><br>
+
+        <label for="email">อีเมล</label><br>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <br><br>
+
+        <label for="password">รหัสผ่าน</label><br>
+        <input type="password" id="password" name="password" placeholder="อย่างน้อย 8 ตัวอักษร" minlength="8" required>
+        <br><br>
+
+        <label for="confirm">ยืนยันรหัสผ่าน</label><br>
+        <input type="password" id="confirm" name="confirm" placeholder="ยืนยันรหัสผ่าน" required>
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">ยอมรับข้อกำหนดและเงื่อนไข</label>
+        <br><br>
+
+        <button type="submit">ลงทะเบียน</button>
+    </fieldset>
+</form>
+
+</body>
+</html>
