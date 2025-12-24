@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar Challenge</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #42b1b9;
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .navbar-brand {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        .nav-links li a {
+            color: rgb(243, 237, 237);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            background-color: hsl(185, 46%, 86%);
+        }
+        .hamburger-menu {
+            display: none; 
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #133a3e;
+                position: absolute;
+                top: 70px;
+                left: 0;
+            }
+            .nav-links li {
+                margin: 0;
+            }
+            .nav-links li a {
+                padding: 1rem;
+                border-top: 1px solid #0c147a;
+            }
+            .nav-links.nav-links--open {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Nattida</a>
+        <div class="hamburger-menu" id="hamburger-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">สินค้า</a></li>
+            <li><a href="#">บริการ</a></li>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding: 20px;">
+        <h1>ยินดีต้อนรับ</h1>
+        <p>ลองปรับขนาดหน้าจอเพื่อดูการทำงานของแถบนำทาง</p>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById("hamburger-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("nav-links--open");
+        });
+    </script>
+
+</body>
+</html>
