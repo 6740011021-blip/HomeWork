@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Nattida</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f1f3;
+            color: #060e7b;
+        }
+
+        .navbar {
+            background-color: #76d5dc;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar-brand {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #1d5d64;
+                position: absolute;
+                top: 70px;
+                left: 0;
+            }
+
+            .nav-links.nav-links--open {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links li a {
+                padding: 1rem;
+                border-top: 1px solid #0c147a;
+            }
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0 15px;
+        }
+
+        /* ===== แก้เฉพาะส่วนแนะนำตัว ===== */
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-text p {
+            color: #0a1a60;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        /* ===== จบส่วนแนะนำตัว ===== */
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            width: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .cardsquare {
+            background: rgb(172, 193, 222);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cardsquare img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .about {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .about p {
+            max-width: 500px;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#Home" class="navbar-brand">Nattida</a>
+
+        <div class="hamburger-menu" id="hamburger-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact me</a></li>
+            <li><a href="https://github.com/6740011021-blip/HomeWork.git">GitHub</a></li>
+            <li><a href="https://sites.google.com/d/1ykKzKAYnRHFY8hgImy3cOrT8evDBd98O/p/1S475KfZEQVFsKLPWLAXfEN-M4tOnulJd/edit">Sites</a></li>
+        </ul>
+    </nav>
+
+    <main id="Home">
+        <h1>WELCOME</h1>
+        <h1>To My Portfolio.</h1>
+    </main>
+
+    <div class="profile">
+        <img src="image/52e2b540-afd6-4389-a7a0-42d7fbc609c9.jpg" alt="Profile">
+        <div class="profile-text">
+            <h3>I'm Nattida Prakhut</h3>
+            <p>Information Technology students</p>
+        </div>
+    </div>
+
+    <h2 id="Skills">My Skills</h2>
+    <div class="container">
+        <div class="card">
+            <img src="image/arts.jpg">
+            <h3>Design</h3>
+            <button>View more</button>
+        </div>
+        <div class="card">
+            <img src="image/Coding programming icon.jpg">
+            <h3>Program</h3>
+            <button>View more</button>
+        </div>
+    </div>
+
+    <h2 id="Projects">My Projects</h2>
+    <div class="container">
+        <div class="cardsquare">
+            <img src="image/ดาวน์โหลด (6).jpg">
+            <h3>Projects Design</h3>
+            <button>View more</button>
+        </div>
+        <div class="cardsquare">
+            <img src="image/ดาวน์โหลด (7).jpg">
+            <h3>Projects CSS</h3>
+            <button>View more</button>
+        </div>
+        <div class="cardsquare">
+            <img src="image/Files free icons designed by Smartline.jpg">
+            <h3>Projects HTML</h3>
+            <button>View more</button>
+        </div>
+    </div>
+
+    <section class="about" id="About">
+        <h2>About Me</h2>
+        <p>My name is Nattida Prakhut</p>
+        <p>Student ID: 6740011021</p>
+        <p>Major: Information Technology</p>
+        <p>Level: 2nd Year</p>
+    </section>
+
+    <section class="about" id="Contact">
+        <h2>Contact Me</h2>
+        <div class="card">
+            <img src="image/email.jpg">
+            <p>Email: 6740011021@psu.ac.th</p>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById("hamburger-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("nav-links--open");
+        });
+    </script>
+
+</body>
+</html>
